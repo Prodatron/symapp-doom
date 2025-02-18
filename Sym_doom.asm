@@ -21,7 +21,7 @@
 
  org #1000
 
- output "e:\symbos\apps\DOOM.EXE"
+ output "f:\symbos\apps\DOOM.EXE"
  include "SymbOS-Constants.asm"
 
  relocate_start

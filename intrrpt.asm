@@ -116,16 +116,16 @@ NormalPlayerInput
     or a
     jp z,skip_key_normal1
 
-    ld de,256*65+57 ;e  ="3", d  ="2"
-    ld ix,256*23+64 ;ixl="1", ixh=ctrl
-    ld iy,256*66+21 ;iyl=shft,iyh=esc
+    ld de,256*66+57     ;  e="3",  d=esc - b05
+    ld ix,256*64+65     ;ixl="2",ixh="1" - b12
+    ld iy,256*21+23     ;iyl=ctr,iyh=shf - b34
     ld hl,jmp_keymul:rst #28
     ld a,e
     ld (keys_esc123),a
 
-    ld de,256*08+01 ;e  =rgt, d  =lft
-    ld ix,256*00+02 ;ixl=dwn, ixh=up
-    ld iy,256*71+63 ;iyl="X", iyh="Z"
+    ld de,256*71+01     ;  e=rgt,  d="Z" - b05
+    ld ix,256*02+08     ;ixl=lft,ixh=dwn - b12
+    ld iy,256*63+00     ;iyl= up,iyh="X" - b34
     ld hl,jmp_keymul:rst #28
     ld a,e
     ld (keys_zxudlr),a
